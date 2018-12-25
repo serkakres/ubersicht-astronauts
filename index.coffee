@@ -5,18 +5,23 @@ refreshFrequency: 21000000
 
 style: """
   position: absolute
-  top: 20px
-  left: 20px
-  color: #fff
+  top: 80px
+  right: 20px
+  color: #bbb
 
+  #num
+    color: #fff
+    font-weight: 400
   .output p,
   .output ul
     margin: 0
+    list-style-type: none
+    text-align: right
 
   .output
     font-family: Helvetica Neue
-    font-size: 20px
-    font-weight: 200
+    font-size: 18px
+    font-weight: 300
     text-shadow: 0 1px 5px #000000;
 
   ul li
@@ -62,6 +67,3 @@ update: (output, domEl) ->
     numOfPeople = jsonData.number
     $(domEl).find('#num').html numOfPeople
 
-    $(domEl).find('#people').html ""
-    for person in jsonData.people
-      $(domEl).find('#people').append '<li>'+person.name+' ('+person.craft+')</li>'
