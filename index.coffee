@@ -5,7 +5,7 @@ refreshFrequency: 21000000
 
 style: """
   position: absolute
-  top: 80px
+  top: 50px
   right: 20px
   color: #bbb
 
@@ -35,7 +35,6 @@ render: (output) -> """
   <div class="output">
     <p id="success">
       <span id="num">?</span> People in Space right now<br>
-      <ul id="people"></ul>
     </p>
     <p id="error">Not sure how many people are in space...</p>
   </div>
